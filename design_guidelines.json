@@ -1,0 +1,106 @@
+{
+  "identity": {
+    "name": "Needify",
+    "vibe": "Fresh Campus",
+    "archetype": "Organic & Earthy (Gen Z Edition)",
+    "emotional_tone": "Trustworthy, Energetic, Community-driven, Simple",
+    "target_audience": "College Students (Gen Z)"
+  },
+  "typography": {
+    "font_family_heading": "Outfit, sans-serif",
+    "font_family_body": "DM Sans, sans-serif",
+    "font_urls": [
+      "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap"
+    ],
+    "scale": {
+      "h1": "text-4xl md:text-5xl font-bold tracking-tight",
+      "h2": "text-3xl md:text-4xl font-semibold tracking-tight",
+      "h3": "text-2xl font-semibold",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm text-muted-foreground"
+    }
+  },
+  "colors": {
+    "palette": {
+      "primary": "#4ADE80",
+      "primary_foreground": "#064E3B",
+      "secondary": "#F0FDF4",
+      "secondary_foreground": "#166534",
+      "accent": "#86EFAC",
+      "accent_foreground": "#065F46",
+      "background": "#FFFFFF",
+      "foreground": "#052e16",
+      "muted": "#F3F4F6",
+      "muted_foreground": "#6B7280",
+      "border": "#E5E7EB",
+      "input": "#F9FAFB",
+      "ring": "#22C55E"
+    },
+    "gradients": {
+      "hero": "bg-gradient-to-br from-green-50 to-white",
+      "card": "bg-white hover:bg-green-50/50 transition-colors duration-300",
+      "button": "bg-gradient-to-r from-green-400 to-green-500 hover:from-green-500 hover:to-green-600 text-white shadow-lg shadow-green-200/50"
+    },
+    "dark_mode_strategy": "Soft Dark Mode (Dark Green/Slate instead of Pure Black). Background: #022c22, Card: #064e3b"
+  },
+  "layout": {
+    "structure": "Mobile-First PWA Style",
+    "container": "max-w-md mx-auto md:max-w-5xl px-4 md:px-8",
+    "spacing": {
+      "section_gap": "py-12 md:py-20",
+      "element_gap": "gap-4 md:gap-6"
+    },
+    "grid_system": "Bento Grid for Dashboard (mix of 1x1, 2x1, 2x2 cards)",
+    "navigation": {
+      "mobile": "Fixed Bottom Bar (Glassmorphism)",
+      "desktop": "Top Sticky Header (Minimalist)"
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "Pill-shaped (rounded-full)",
+      "animation": "transform active:scale-95 transition-all duration-200"
+    },
+    "cards": {
+      "style": "rounded-2xl border border-green-100 shadow-sm hover:shadow-md transition-all duration-300 bg-white",
+      "padding": "p-6"
+    },
+    "inputs": {
+      "style": "rounded-xl bg-gray-50 border-transparent focus:border-green-300 focus:bg-white transition-all duration-200 h-12"
+    },
+    "visual_enhancers": {
+      "glassmorphism": "backdrop-blur-xl bg-white/70 border border-white/20 shadow-sm",
+      "texture": "Use subtle noise overlay on backgrounds to reduce digital flatness",
+      "shadows": "Soft, colored shadows (shadow-green-100)"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_student_life": "https://images.unsplash.com/photo-1758270705482-cee87ea98738?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "campus_vibe": "https://images.unsplash.com/photo-1625640776489-4186592c6f00?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "student_working": "https://images.unsplash.com/photo-1620829813573-7c9e1877706f?crop=entropy&cs=srgb&fm=jpg&q=85",
+      "abstract_bg": "https://images.unsplash.com/photo-1693389107440-afe980ccbb8d?crop=entropy&cs=srgb&fm=jpg&q=85"
+    },
+    "icons": "Lucide React (Rounded style)"
+  },
+  "instructions_to_main_agent": [
+    "1. THEME SETUP: Update tailwind.config.js with the custom color palette defined above. Use 'Outfit' for headings and 'DM Sans' for body.",
+    "2. LAYOUT: Implement a mobile-first layout. On desktop, center the mobile view content or expand to a dashboard grid.",
+    "3. NAVIGATION: Create a 'BottomNav' component for mobile (Home, Gigs, Services, Orders, Profile) using the Glassmorphism style.",
+    "4. CARDS: Use the 'Bento Grid' concept for the Home Dashboard. Mix different card sizes.",
+    "5. ANIMATION: Add 'framer-motion' for page transitions and list item entrance animations (staggered fade-in).",
+    "6. FORMS: Customize Shadcn Input and Button components to match the 'Pill-shaped' and 'Soft' aesthetic.",
+    "7. IMAGES: Use the provided Unsplash URLs for the Landing Page and empty states.",
+    "8. CRITICAL: Do not use default Shadcn 'slate' colors. Replace them with the 'green/neutral' palette defined.",
+    "9. ACCESSIBILITY: Ensure text contrast is high (Dark Green on Light Green/White).",
+    "10. TESTING: Add data-testid to all interactive elements."
+  ],
+  "universal_guidelines": [
+    "Avoid generic 'Bootstrap' look.",
+    "Use 2-3x more spacing than typical designs.",
+    "Every interaction needs micro-animations.",
+    "Use 'sonner' for toasts.",
+    "Components MUST use named exports.",
+    "Pages MUST use default exports."
+  ]
+}
